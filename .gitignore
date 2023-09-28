@@ -1,0 +1,10 @@
+
+# Ignore local .terraform directory
+**/.terraform/*
+
+
+# Ignore .tfstate files
+*.tfstate
+*.tfstate.*
+*.pem
+**/Anota*

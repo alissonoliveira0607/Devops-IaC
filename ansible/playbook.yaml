@@ -1,0 +1,15 @@
+- hosts: terraform-ansible
+  tasks:
+    - name: Instalando os pacotes
+      apt:
+        pkg: 
+        - python3
+        - virtualenv
+        update_cache: yes
+      become: yes 
+    - name: Iniciando a venv e instalando as dependências
+      pip:
+        virtualenv: /home/ubuntu/venv
+        name:  
+          - django
+          - djangorestframework
